@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Javascript</title>
+    <script>
+        var x = 5;
+        var y = 6;
+        /*alert(x+y);*/
+        console.log('O resultado é '+(x+y));
+        if (x > y) {
+            console.log('X é maior que Y');
+        } else {
+            console.log('X é menor que Y');
+        }
+
+        if ((x != y) &&
+            (x == y) ||
+            (x == y)) {
+            console.log('X é diferente de Y');
+        }
+
+        var retorno = (x > y) ? "X é maior que Y" : "X é menor que Y";
+        console.log(retorno);
+
+        for (var i = 0; i <= 5; i++) {
+            console.log('Valor de i é '+i);
+            switch (i) {
+                case 1:
+                    console.log('Estou aqui!');
+                    break;
+                case 3:
+                    console.log('Agora estou aqui!');
+                    break;
+                default:
+                    console.log('Toca pra frente.');
+                    break;
+            }
+        }
+        var i = 0;
+        while (i <= 5) {
+            console.log('->Valor de i é '+i);
+            i++;
+        }
+
+        console.log(2**2); //exponenciação
+        console.log(5 % 2); //resto da divisão
+//Usando a classe String
+        var nome = "Marcos";
+        console.log(nome+" - "+nome.length+" - "+nome.substr(0,3));
+//Usando arrays
+        var nomes = ["Marcos", "Rogério", "Cardoso"];
+        for (var i = 0; i < nomes.length; i++) {
+            console.log(nomes[i]);
+        }
+        nomes.push("Professor");
+        for (var i = 0; i < nomes.length; i++) {
+            console.log(nomes[i]);
+        }
+    </script>
+</head>
+<body>
+    <h1>Exemplo Javascript</h1>
+    <button onclick="document.write(x+y)">Calcula X + Y</button>
+</body>
+</html>

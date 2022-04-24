@@ -1,0 +1,64 @@
+.botao {
+    background-color: wheat;
+    padding: 3px 8px;
+    border-radius: 25%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.botao:link, .botao:visited {
+    color: brown;
+    text-decoration: none;
+}
+
+.botao:hover {
+    background-color: darkcyan;
+}
+
+.botao:active {
+    color: blanchedalmond;
+}
+
+#lista1 {
+    list-style-type: square;
+}
+
+#lista2 {
+    list-style-type: none;
+}
+
+#lista3 {
+    list-style-type: upper-roman;
+}
+
+.tabela {
+    border-collapse: collapse;
+    /*width: 100%;*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tabela th {
+    text-align: left;
+    background-color: yellowgreen;
+}
+
+.tabela td,.tabela th {
+    border-bottom: 1px solid silver;
+    padding: 5px;
+}
+
+.tabela tr:nth-child(even) { /*even - par odd - ímpar*/
+    background-color: #ddd;
+}
+
+.tabela tr:hover {
+    background-color: silver;
+}
+
+.tabela tr:active {
+    background-color: black;
+    color: white;
+}
+
+ul li:last-child {
+    background-color: lightgray;
+}

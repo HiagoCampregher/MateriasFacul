@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Objetos</title>
+    <script src="js/classPessoa.js"></script>
+    <script>
+        var objPessoa = new pessoa("","");
+        function instanciaPessoa() {
+            objPessoa = new pessoa(
+                document.getElementById('nmPessoa').value,
+                document.getElementById('dtNasc').value
+            );
+            document.getElementById('resultado').innerHTML =
+              'O nome &eacute; '+objPessoa.getNome()+' ('+objPessoa.getNome().length+') '+
+              ' e a data nascimento &eacute; '+objPessoa.getDtNasc();
+        }
+        function mostraIdade() {
+            document.getElementById('resultado').innerHTML =
+              'A idade &eacute; '+objPessoa.idade();
+        }
+    </script>
+</head>
+<body>
+    <label for="nmPessoa">Nome: </label>
+    <input type="text" name="nmPessoa" id="nmPessoa" required>
+    <label for="dtNasc">Data nasc.:</label>
+    <input type="date" id="dtNasc" name="dtNasc" required>
+    <p>
+        <button onclick="instanciaPessoa()">Instancia pessoa</button>
+        <button onclick="mostraIdade()">Mostra idade</button>
+    </p>
+    <div id="resultado"></div>
+    <script>
+        //document.getElementById('resultado').innerHTML = 'O nome &eacute; '+objPessoa.getNome();
+    </script>
+</body>
+</html>

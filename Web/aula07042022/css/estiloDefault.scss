@@ -1,0 +1,29 @@
+$cor1: red;
+$cor2: green;
+header, footer {
+    background-color: $cor1;
+    color: $cor2;
+}
+
+a {
+    background-color: $cor1;
+    color: $cor2;
+}
+
+nav {
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    li {
+        display: inline-block;
+    }
+    a {
+        padding: 3px;
+    }
+    a:hover {
+        background: black;
+        color: white;
+    }
+}

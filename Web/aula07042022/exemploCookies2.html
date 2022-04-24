@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Cookies 2</title>
+    <script>
+        function mostraCookie() {
+            if (document.cookie != '') {
+                document.getElementById('conteudoCookie').innerHTML = document.cookie;
+            } else {
+                document.getElementById('conteudoCookie').innerHTML = 'N&atilde;o h&aacute; conte&uacute;do no cookie!';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="conteudoCookie"></div>
+    <button onclick="mostraCookie()">Pega conte&uacute;do cookie</button>
+    <div id="timer"></div>
+    <script>
+        setInterval(mostraTimer,1000);
+        function mostraTimer() {
+            var date = new Date();
+            document.getElementById('timer').innerHTML = date.toLocaleDateString()+' - '+date.toLocaleTimeString();
+        }
+        setTimeout(mostraAlert,5000);
+        function mostraAlert() {
+            alert('Aqui!');
+        }
+    </script>
+    <p><button onclick="location.replace('exemploCookies1.html')">P&aacute;gina 1</button></p>
+</body>
+</html>

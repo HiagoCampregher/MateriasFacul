@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Javascript 2</title>
+    <style>
+        nav {
+            padding: 5px;
+            background-color: blue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .menuPrincipal {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            border: none;
+        }
+        .subMenu {
+            display: none;
+            position: fixed;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo Javascript 2</h1>
+    <nav>
+        <button class="menuPrincipal" onclick="document.getElementById('submenu1').style.display='block';">Op&ccedil;&atilde;o 1</button>
+        <ul class="subMenu" id="submenu1">
+            <li>Op&ccedil;&atilde;o 1.1</li>
+            <li>Op&ccedil;&atilde;o 1.2</li>
+        </ul>
+    </nav>
+    <button onclick="document.getElementById('div1').innerHTML = 'Alterei o conte&uacute;do!'">Altera conte&uacute;do da div abaixo</button>
+    <div id="div1">Conte&uacute;do da div</div>
+    <div id="div2" style="background-color:yellow;">Outra div para alterar.</div>
+    <button onclick="document.getElementById('div2').style.backgroundColor = 'red';">Altera a div acima</button>
+    <script src="js/funcoes.js"></script>
+    <div id="div3" style="display:none;">Conte&uacute;do escondido na p&aacute;gina.</div>
+    <button onclick="document.getElementById('div3').style.display = 'block';">Clique para mostrar acima.</button>
+    <div id="div4" style="visibility: hidden;">Outro conte&uacute;do escondido na p&aacute;gina.</div>
+    <button onclick="document.getElementById('div4').style.visibility = 'visible';">Clique para mostrar acima.</button>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Cookies 1</title>
+    <script>
+        function setaCookie() {
+            var date = new Date();
+            date.setTime(date.getTime()+10000);
+            document.cookie = "username="+document.getElementById('userName').value+"; expires="+date.toGMTString()+";";
+            console.log(document.cookie);
+        }
+        function resetaCookie() {
+            var date = new Date();
+            document.cookie = 'username=; expires='+date.toGMTString()+';';
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="userName" name="userName"><button onClick="setaCookie()">Seta cookie</button>
+    <button onClick="resetaCookie()">Reseta cookie</button>
+    <p><button onclick="location.replace('exemploCookies2.html')">P&aacute;gina 2</button></p>
+</body>
+</html>

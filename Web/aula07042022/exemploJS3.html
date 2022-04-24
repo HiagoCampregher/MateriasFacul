@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo JS 3</title>
+    <style>
+        .classe1 {
+            background-color: red;
+            color: white;
+            font-style: italic;
+        }
+        .classe2 {
+            padding: 10px;
+            border: 1px solid blue;
+        }
+        @keyframes mudaCor {
+            /*from {background-color: red;}
+            to {background-color: blue;}*/
+            0% {background-color: red; left: 0px; top:0px;}
+            25% {background-color: green; left: 200px; top:0px;}
+            50% {background-color: yellow; left: 200px; top: 200px;}
+            75% {background-color: turquoise; left: 0px; top: 200px;}
+            100% {background-color: blue; left: 0px; top: 0px;}
+        }
+        .parado {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .movendo {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: red;
+            animation-name: mudaCor;
+            animation-duration: 15s;
+        }
+    </style>
+    <script>
+        function mudaEstilo(pID,pEstiloAdd,pEstiloDel) {
+            //alert('Fui chamado!');
+            document.getElementById(pID).classList.remove(pEstiloDel)
+            document.getElementById(pID).classList.add(pEstiloAdd);
+        }
+    </script>
+</head>
+<body>
+    <div id="muda">
+        Conte&uacute;do da DIV que ser&aacute; mudado.
+    </div>
+    <p>
+        <button onclick="mudaEstilo('muda','classe1','classe2')">Muda classe1</button>
+        <button onclick="mudaEstilo('muda','classe2','classe1')">Muda classe2</button>
+    </p>
+    <p>
+        <button onclick="document.getElementById('muda').classList.toggle('classe1')">classe1 on/off</button>
+        <button onclick="document.getElementById('muda').classList.toggle('classe2')">classe2 on/off</button>
+    </p>
+    <p><button onclick="document.getElementById('anima').classList.toggle('movendo')">Ativa anima&ccedil;&atilde;o</button></p>
+    <div id="anima" class="parado"></div>
+</body>
+</html>
